@@ -72,7 +72,7 @@ class LinksUpdateComplete implements HookListener {
 	 *
 	 * @return true
 	 */
-	public function process( LinksUpdate $linksUpdate ) {
+	public function process( \MediaWiki\Deferred\LinksUpdate\LinksUpdate $linksUpdate ) {
 		if ( $this->isReady === false ) {
 			return $this->doAbort();
 		}
